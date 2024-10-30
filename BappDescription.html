@@ -1,0 +1,34 @@
+<p>This extension provides advanced capabilities and automation for finding and exploiting Client-Side Path Traversal.</p>
+
+<p>This extension is a Burp Suite Passive Scanner. It reads your proxy history and looks for query parameters reflected inside the path of any other query. Please note that it will not find any DOM-based or stored CSPT until you use the canary token feature.</p>
+
+<p>Usage</p>
+
+<ol>
+	<li>Browse your target application</li>
+	<li>Go to the CSPT tab</li>
+	<li>Verify that the source and sink scopes are correct</li>
+	<li>Check the sink HTTP methods you want to search</li>
+	<li>Click on Scan</li>
+</ol>
+
+<p>Understanding scan results</p>
+
+<ul>
+	<li>The reflected values are on the left. Click one to see the associated sources and the potential sinks.</li>
+	<li>To confirm it is not a false positive, you can right-click on a source and use the "Copy URL With Canary" feature. Then copy this URL inside your browser. If this URL triggers a request with the canary token inside the path, it means that a CSPT is present and an issue will be created.</li>
+	<li>Instead of testing all the sources one-by-one, you can use the "Export Sources With Canary". It will copy all potential sources with canaries. Then you just need to open all the links with your browser (some browser extensions are able to do that).</li>
+	<li>You can also modify or regenerate a new canary token.</li>
+	<li>In case some results are false positives, you can discard them. They will not be displayed in the next scan.</li>
+</ul>
+
+<p>Finding sinks</p>
+
+<p>If you have identified a CSPT, you will want to find exploitable sinks. The extension can help you to do it by right-clicking on a sink to "Send sinks(host/method) To Organizer".</p>
+
+<p>False postitives list</p>
+
+<ul>
+	<li>To discard false positives, you just need to right-click on a source and set either the Parameter or URL as a false positive.</li>
+	<li>The "False Positive List" summarizes all defined rules and can be modified.</li>
+</ul>

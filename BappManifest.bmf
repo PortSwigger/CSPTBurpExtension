@@ -1,0 +1,13 @@
+Uuid: eefe20568a894635b500ad13fdc8a683
+ExtensionType: 1
+Name: Client-Site Path Traversal Exploitation
+RepoName: client-side-path-traversal-exploitation
+ScreenVersion: 1.0
+SerialVersion: 1
+MinPlatformVersion: 15
+ProOnly: True
+Author: Maxence Schmitt, Doyensec
+ShortDescription: Find and exploit Client-Side Path Traversal.
+EntryPoint: build/client-side-path-traversal-exploitation-v1.jar
+BuildCommand: ./gradlew jar
+SupportedProducts: Pro
